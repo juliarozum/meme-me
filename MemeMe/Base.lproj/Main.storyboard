@@ -40,13 +40,17 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJc-Cc-3VO">
                                 <rect key="frame" x="0.0" y="818" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="2Js-No-eDf">
+                                    <navigationItem id="2Js-No-eDf">
                                         <barButtonItem key="leftBarButtonItem" title="Album" id="MR8-Hp-Utm">
                                             <connections>
                                                 <action selector="pickAnImagefromAlbum:" destination="BYZ-38-t0r" id="vXf-Ys-fYD"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Item" id="a0f-vg-MDD"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="camera" catalog="system" id="a0f-vg-MDD">
+                                            <connections>
+                                                <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="e7K-3w-roB"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -69,6 +73,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cameraButton" destination="a0f-vg-MDD" id="dU3-tO-jjf"/>
                         <outlet property="imageView" destination="pqo-we-mnL" id="JId-5A-tvq"/>
                     </connections>
                 </viewController>
@@ -78,6 +83,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
