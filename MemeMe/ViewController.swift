@@ -137,6 +137,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
             self.present(shareFile, animated: true, completion: nil)
             }
+    
+    @IBAction func cancelImage(_ sender: Any) {
+        shareButton.isEnabled = false
+        imageView.image = nil
+        textTop.text = "TOP"
+        textBottom.text = "BOTTOM"
+    }
 }
 
 

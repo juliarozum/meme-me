@@ -27,7 +27,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="KOi-9o-5d1"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
                                     </textField>
@@ -80,6 +79,11 @@
                                         <barButtonItem key="leftBarButtonItem" title="I" image="square.and.arrow.up" catalog="system" id="95O-Vi-AEC">
                                             <connections>
                                                 <action selector="share" destination="BYZ-38-t0r" id="Is8-ZX-fyc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="Clu-AP-E7G">
+                                            <connections>
+                                                <action selector="cancelImage:" destination="BYZ-38-t0r" id="jK3-CC-e2T"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
