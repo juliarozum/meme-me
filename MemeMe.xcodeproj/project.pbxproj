@@ -13,6 +13,7 @@
 		A331EABC27A1DB62000368F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A331EABA27A1DB62000368F6 /* Main.storyboard */; };
 		A331EABE27A1DB64000368F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A331EABD27A1DB64000368F6 /* Assets.xcassets */; };
 		A331EAC127A1DB64000368F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A331EABF27A1DB64000368F6 /* LaunchScreen.storyboard */; };
+		A331EAC927A46936000368F6 /* MemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A331EAC827A46936000368F6 /* MemeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A331EABD27A1DB64000368F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A331EAC027A1DB64000368F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A331EAC227A1DB64000368F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A331EAC827A46936000368F6 /* MemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				A331EAB427A1DB62000368F6 /* AppDelegate.swift */,
 				A331EAB627A1DB62000368F6 /* SceneDelegate.swift */,
 				A331EAB827A1DB62000368F6 /* ViewController.swift */,
+				A331EAC827A46936000368F6 /* MemeModel.swift */,
 				A331EABA27A1DB62000368F6 /* Main.storyboard */,
 				A331EABD27A1DB64000368F6 /* Assets.xcassets */,
 				A331EABF27A1DB64000368F6 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				A331EAB927A1DB62000368F6 /* ViewController.swift in Sources */,
 				A331EAB527A1DB62000368F6 /* AppDelegate.swift in Sources */,
 				A331EAB727A1DB62000368F6 /* SceneDelegate.swift in Sources */,
+				A331EAC927A46936000368F6 /* MemeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

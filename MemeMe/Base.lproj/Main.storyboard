@@ -76,7 +76,13 @@
                             <navigationBar contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gmx-4X-9My">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="PZT-Fp-MsW"/>
+                                    <navigationItem title="Title" id="PZT-Fp-MsW">
+                                        <barButtonItem key="leftBarButtonItem" title="I" image="square.and.arrow.up" catalog="system" id="95O-Vi-AEC">
+                                            <connections>
+                                                <action selector="share" destination="BYZ-38-t0r" id="Is8-ZX-fyc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -104,6 +110,7 @@
                     <connections>
                         <outlet property="cameraButton" destination="a0f-vg-MDD" id="dU3-tO-jjf"/>
                         <outlet property="imageView" destination="pqo-we-mnL" id="JId-5A-tvq"/>
+                        <outlet property="shareButton" destination="95O-Vi-AEC" id="OMK-zp-XPt"/>
                         <outlet property="textBottom" destination="9zh-Bc-sZm" id="pHd-HI-qH5"/>
                         <outlet property="textTop" destination="9Ha-6x-tCm" id="SYX-qS-1FW"/>
                     </connections>
@@ -115,6 +122,7 @@
     </scenes>
     <resources>
         <image name="camera" catalog="system" width="128" height="94"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

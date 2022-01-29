@@ -25,5 +25,7 @@
 	<string>&quot;MemeMe&quot; App needs to use the camera to take a picture.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>&quot;MemeMe&quot; App needs to use the photo library to pick a picture.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>&quot;MemeMe&quot; App needs to save a meme to your gallery.</string>
 </dict>
 </plist>
