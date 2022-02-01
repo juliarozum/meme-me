@@ -33,13 +33,13 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         super.viewDidLoad()
         prepareTextField(textField: textTop, defaultText: "TOP")
         prepareTextField(textField: textBottom, defaultText: "BOTTOM")
+        shareButton.isEnabled = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         subscribeToKeyboardNotifications()
-        shareButton.isEnabled = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -118,6 +118,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     func save() {
         let memedImageView: UIImage = generateMemedImage()
         _ = Meme(topText: textTop.text!, bottomText: textBottom.text!, originalImage: imageView.image!, memedImage: memedImageView)
+
     }
     
     func generateMemedImage() -> UIImage {
@@ -136,9 +137,9 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     //sent the generated meme to the activity view controller and present the controller
     @IBAction func share() {
-        let memedImage: UIImage = generateMemedImage()
+      let memedImage: UIImage = generateMemedImage()
         let shareFile = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
-            shareFile.completionWithItemsHandler = { (_, completed, _, _) in self.save()
+            shareFile.completionWithItemsHandler = { (activity, completed, items, error) in self.save()
         if (completed) {
             self.save()
             }
