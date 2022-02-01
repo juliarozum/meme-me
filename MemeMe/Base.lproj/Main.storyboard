@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,22 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Meme Editor View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MemeEditorViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lG-Rq-rfu">
-                                <rect key="frame" x="0.0" y="88" width="414" height="730"/>
+                                <rect key="frame" x="0.0" y="88" width="320" height="402"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pqo-we-mnL">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="730"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="402"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9zh-Bc-sZm">
-                                        <rect key="frame" x="8" y="650" width="398" height="40"/>
+                                        <rect key="frame" x="8" y="322" width="304" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="KOi-9o-5d1"/>
                                         </constraints>
@@ -31,7 +31,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9Ha-6x-tCm">
-                                        <rect key="frame" x="8" y="40" width="398" height="40"/>
+                                        <rect key="frame" x="8" y="40" width="304" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="aql-I1-uKe"/>
                                         </constraints>
@@ -55,27 +55,10 @@
                                     <constraint firstAttribute="trailing" secondItem="9zh-Bc-sZm" secondAttribute="trailing" constant="8" id="zgL-Me-Br9"/>
                                 </constraints>
                             </view>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJc-Cc-3VO">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                            <navigationBar contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gmx-4X-9My" userLabel="Navigation Bar (top)">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
                                 <items>
-                                    <navigationItem id="2Js-No-eDf">
-                                        <barButtonItem key="leftBarButtonItem" title="Album" id="MR8-Hp-Utm">
-                                            <connections>
-                                                <action selector="pickAnImagefromAlbum:" destination="BYZ-38-t0r" id="vXf-Ys-fYD"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Item" image="camera" catalog="system" id="a0f-vg-MDD">
-                                            <connections>
-                                                <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="e7K-3w-roB"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <navigationBar contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gmx-4X-9My">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="PZT-Fp-MsW">
+                                    <navigationItem id="PZT-Fp-MsW">
                                         <barButtonItem key="leftBarButtonItem" title="I" image="square.and.arrow.up" catalog="system" id="95O-Vi-AEC">
                                             <connections>
                                                 <action selector="share" destination="BYZ-38-t0r" id="Is8-ZX-fyc"/>
@@ -84,6 +67,23 @@
                                         <barButtonItem key="rightBarButtonItem" title="Cancel" id="Clu-AP-E7G">
                                             <connections>
                                                 <action selector="cancelImage:" destination="BYZ-38-t0r" id="jK3-CC-e2T"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJc-Cc-3VO" userLabel="Navigation Bar (bottom)">
+                                <rect key="frame" x="0.0" y="490" width="320" height="78"/>
+                                <items>
+                                    <navigationItem id="2Js-No-eDf">
+                                        <barButtonItem key="leftBarButtonItem" title="Album" id="MR8-Hp-Utm">
+                                            <connections>
+                                                <action selector="pickImageFromAlbum" destination="BYZ-38-t0r" id="vQN-cv-fsq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="camera" catalog="system" id="a0f-vg-MDD">
+                                            <connections>
+                                                <action selector="pickImageFromCamera" destination="BYZ-38-t0r" id="9nX-nc-6A3"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -114,9 +114,11 @@
                     <connections>
                         <outlet property="cameraButton" destination="a0f-vg-MDD" id="dU3-tO-jjf"/>
                         <outlet property="imageView" destination="pqo-we-mnL" id="JId-5A-tvq"/>
+                        <outlet property="navigationBarBottom" destination="lJc-Cc-3VO" id="Zxv-gM-pG8"/>
+                        <outlet property="navigationBarTop" destination="Gmx-4X-9My" id="0CV-mD-lxB"/>
                         <outlet property="shareButton" destination="95O-Vi-AEC" id="OMK-zp-XPt"/>
-                        <outlet property="textBottom" destination="9zh-Bc-sZm" id="pHd-HI-qH5"/>
-                        <outlet property="textTop" destination="9Ha-6x-tCm" id="SYX-qS-1FW"/>
+                        <outlet property="textBottom" destination="9zh-Bc-sZm" id="zZH-fG-etC"/>
+                        <outlet property="textTop" destination="9Ha-6x-tCm" id="FEK-s7-Bfb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
